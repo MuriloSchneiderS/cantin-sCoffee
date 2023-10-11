@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #e5d3ba;
+}
+header{
+    background-color: #181f27;
+    color: #e5d3ba;
+    position:sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+.barra-pesquisa{
+    background-color: transparent;
+    border: solid 2px #e5d3ba;
+    color: #e5d3ba;
+    height: 100%;
+    width: 35%;
+}
+header menu{
+    width: 50%;
+}
+header ul{
+    list-style: none;
+    justify-content: space-between;
+    display: flex;
+    padding: 15px;
+}
+header ul li{
+    padding: 15px;
+}
+
+.banner{
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+}
+.banner img{
+    object-fit:cover;
+    object-position: 100% 100%;
+    width: 100%;
+    height: 625px;
+}
