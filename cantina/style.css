@@ -89,9 +89,12 @@ header menu a:hover{
 
 .menu{
     display: flex;
-    justify-content: space-around;
-    width: 1800px;
+    flex-direction: column;
+    
+    min-width: 500px;
+    max-width: 1800px;
 }
 .grid{
     display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
 }
