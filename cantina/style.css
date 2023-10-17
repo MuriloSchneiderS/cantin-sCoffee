@@ -1,9 +1,18 @@
+@font-face {
+    font-family: 'Arapey';
+    src: url(fonts/Arapey/Arapey-Regular.ttf);
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto/Roboto-Regular.ttf);
+}
 *{
     margin: 0;
     padding: 0;
 }
 body{
     background-color: #e5d3ba;
+    font-family: 'Roboto';
 }
 header{
     background-color: #181f27;
@@ -13,37 +22,76 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 25px;
+    height: 75px;
+}
+header .logo a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo img{
+    height: 75px;
+    width: auto;
 }
 .barra-pesquisa{
     background-color: transparent;
     border: solid 2px #e5d3ba;
     color: #e5d3ba;
-    height: 100%;
-    width: 35%;
+    height: 65%;
+    width: 30%;
+    padding: 20px 0;
+    margin: 0 25px;
 }
 header menu{
     width: 50%;
+    padding: 25px;
 }
 header ul{
+    display: flex;
     list-style: none;
     justify-content: space-between;
-    display: flex;
     padding: 15px;
 }
 header ul li{
-    padding: 15px;
+    height: 100%;
+}
+header a{
+    color: #e5d3ba;
+    text-decoration: none;
+}
+header menu a{
+    font-size: 17px;
+    padding: 30px 50px;
+}
+header menu a:hover{
+    background-color: #e5d3ba;
+    color: #181f27;
 }
 
 .banner{
     display: block;
     pointer-events: none;
-    position: absolute;
+    position: relative;
     width: 100%;
 }
-.banner img{
+.banner .background{
     object-fit:cover;
     object-position: 100% 100%;
     width: 100%;
     height: 625px;
+}
+.banner .logo{
+    display: flex;
+    position:fixed;
+    z-index: 2;
+    padding: 5% 42%;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    width: 1800px;
+}
+.grid{
+    display: grid;
 }
