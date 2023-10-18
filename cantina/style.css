@@ -86,6 +86,8 @@ header menu a:hover{
     pointer-events: none;
     position: relative;
     width: 100%;
+    pointer-events: none;
+    user-select: none;
 }
 .banner .background{
     object-fit:cover;
@@ -98,6 +100,9 @@ header menu a:hover{
     position: absolute;
     z-index: 2;
     padding: 5% 42%;
+    background: radial-gradient(#e5d3ba80, transparent, transparent);
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering:crisp-edges;
 }
 
 .menu{
@@ -115,7 +120,7 @@ header menu a:hover{
 footer{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     background-color: #181f27;
     color: #e5d3ba;
