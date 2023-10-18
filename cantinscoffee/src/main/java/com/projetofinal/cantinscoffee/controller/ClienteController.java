@@ -32,7 +32,7 @@ public class ClienteController {
 
     @GetMapping("/adm/cliente/lista")
     public ModelAndView listaCliente() {
-        ModelAndView mv = new ModelAndView("lista");
+        ModelAndView mv = new ModelAndView("listaCliente");
 
         List<Cliente> clientes = new ArrayList<>();
         clientes = repository.findAll();

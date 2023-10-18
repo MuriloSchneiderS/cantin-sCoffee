@@ -15,7 +15,6 @@ import com.projetofinal.cantinscoffee.repository.ProdutoRepository;
 
 @Controller
 public class ProdutoController {
-
     @Autowired
     ProdutoRepository repository;
 
@@ -32,7 +31,7 @@ public class ProdutoController {
 
     @GetMapping("/adm/produto/lista")
     public ModelAndView listaProduto() {
-        ModelAndView mv = new ModelAndView("lista");
+        ModelAndView mv = new ModelAndView("listaProduto");
         List<Produto> produtos = new ArrayList<>();
         produtos = repository.findAll();
         mv.addObject("produtos", produtos);
@@ -42,7 +41,6 @@ public class ProdutoController {
     @GetMapping("/adm/produto/excluir/{idProduto}")
     public String excluir(@PathVariable("idProduto") int idProduto) {
         repository.deleteById(idProduto);
-        return "redirect:/produto/lista";
+        return "redirect:/adm/produto/lista";
     }
-
 }
