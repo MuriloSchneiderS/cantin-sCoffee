@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-/*import org.springframework.web.bind.annotation.PathVariable;*/
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -20,17 +20,18 @@ public class ClienteController {
 
     @GetMapping("/cliente/cadastro")
     public String cadastro() {
-        return "cadastro";
+        return "cadastroCliente";
     }
 
-    @PostMapping("/cadastro")
+    @PostMapping("/cadastroCliente")
     public String cadastroCliente(Cliente cliente) {
         repository.save(cliente);
-        return "redirect:/cardapio";
+        return "redirect:/cliente/cadastro"; // a principio poderia ir pra página de cardápio, criar redirect
+                                // para esse caso com um método /cardápio por exemplo
     }
 
-    @GetMapping("/adm/lista")
-    public ModelAndView lista() {
+    @GetMapping("/adm/cliente/lista")
+    public ModelAndView listaCliente() {
         ModelAndView mv = new ModelAndView("lista");
 
         List<Cliente> clientes = new ArrayList<>();
@@ -38,17 +39,16 @@ public class ClienteController {
         mv.addObject("clientes", clientes);
         return mv;
     }
-    /*
-     * @GetMapping("/cliente/excluir/{idCliente}")
-     * public String excluir(@PathVariable("idCliente") int idCliente) {
-     * repository.deleteById(idCliente);
-     * return "redirect:/adm/lista";
-     * }
-     */
-
+    
+    @GetMapping("/adm/cliente/excluir/{idCliente}")
+    public String excluir(@PathVariable("idCliente") int idCliente) {
+        repository.deleteById(idCliente);
+        return "redirect:/adm/cliente/lista";
+    }
+     
     @GetMapping("/cliente/login")
     public String login() {
-        return "login";
+        return "loginCliente";
     }
 
     @PostMapping("/login")
@@ -63,5 +63,4 @@ public class ClienteController {
         }
         return "redirect:/cliente/login";
     }
-
 }

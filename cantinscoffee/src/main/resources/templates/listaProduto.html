@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>-</th>
+                <th>Nome</th>
+                <th>Descricao</th>
+                <th>Ativo</th>
+                <th>Estoque</th>
+                <th>Preco</th>
+                <th>categoriaId</th>
+                <th>-</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-th-each="p: ${produtos}">
+                <td data-th-text="${p.idProduto}"></td>
+                <td data-th-text="${p.nomeProduto}"></td>
+                <td data-th-text="${p.descricao}"></td>
+                <td data-th-text="${p.ativo}"></td>
+                <td data-th-text="${p.estoque}"></td>
+                <td data-th-text="${p.preco}"></td>
+                <td data-th-text="${p.categoriaId}"></td>
+                
+                <td><a th:href="@{'/adm/produto/excluir/' +${p.idProduto}}">Excluir</a></td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>

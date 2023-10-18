@@ -19,19 +19,19 @@ public class ProdutoController {
     @Autowired
     ProdutoRepository repository;
 
-    @GetMapping("/produto/cadastro")
+    @GetMapping("/adm/produto/cadastro")
     public String cadastro() {
-        return "cadastro";
+        return "cadastroProduto";
     }
 
-    @PostMapping("/cadastro")
+    @PostMapping("/cadastroProduto")
     public String cadastroProduto(Produto produto) {
         repository.save(produto);
-        return "redirect:/produto/lista";
+        return "redirect:/adm/produto/lista";
     }
 
-    @GetMapping("/produto/lista")
-    public ModelAndView lista() {
+    @GetMapping("/adm/produto/lista")
+    public ModelAndView listaProduto() {
         ModelAndView mv = new ModelAndView("lista");
         List<Produto> produtos = new ArrayList<>();
         produtos = repository.findAll();
@@ -39,7 +39,7 @@ public class ProdutoController {
         return mv;
     }
 
-    @GetMapping("/produto/excluir/{idProduto}")
+    @GetMapping("/adm/produto/excluir/{idProduto}")
     public String excluir(@PathVariable("idProduto") int idProduto) {
         repository.deleteById(idProduto);
         return "redirect:/produto/lista";

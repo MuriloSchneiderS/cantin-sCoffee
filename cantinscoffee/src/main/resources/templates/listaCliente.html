@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>-</th>
+                <th>Nome</th>
+                <th>Login</th>
+                <th>Telefone</th>
+                <th>Email/th>
+                <th>Saldo</th>
+                <th>-</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-th-each="c: ${clientes}">
+                <td data-th-text="${c.idCliente}"></td>
+                <td data-th-text="${c.nomeCliente}"></td>
+                <td data-th-text="${c.login}"></td>
+                <td data-th-text="${c.telefone}"></td>
+                <td data-th-text="${c.email}"></td>
+                <td data-th-text="${c.saldo}"></td>
+
+                <td><a th:href="@{'/adm/cliente/excluir/' +${c.idCliente}}">Excluir</a></td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>
