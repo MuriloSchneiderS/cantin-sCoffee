@@ -145,17 +145,41 @@ header menu a:hover{
     justify-content: center;
     padding: 15px;
 }
+@media (max-width: 760px) {
+    .swiper-button-next {
+      right: 10px;
+      transform: rotate(90deg);
+    }
+    .swiper-button-prev {
+      left: 10px;
+      transform: rotate(90deg);
+    }
+}
+.swiper-navBtn{
+    color: #2b2b2b;
+    transition: color .2s ease;
+}
+.swiper-navBtn:hover{
+    color: white;
+}
+swiper-button-next{
+    right: 0;
+}
+swiper-button-prev{
+    left: 0;
+}
+
 .slide-container{
-    max-width: 1120px;
     width: 100%;
-    background-color: aqua;
+    max-height: 1000px;
 }
 .slide-content{
     margin: 0 40px;
 }
 .card{
-    width: 200px;
-    border-radius: 15px;
+    max-height: 500px;
+    border-radius: 25px 25px 10px 10px;
+    margin: 0 15px;
     background-color: #181f27;
     color: #e5d3ba;
 }
@@ -168,25 +192,6 @@ header menu a:hover{
 .card-content h2, .card-content p, .card-content .button{
     z-index: 2;
 }
-.overlay{
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #e5d3ba;
-    border-radius: 10px 10px 0 25px;
-}
-.overlay::after{
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -40px;
-    height: 40px;
-    width: 40px;
-    border-radius: 0 25px 0 0;
-    background-color: #181f27;
-}
 .image-content{
     position: relative;
     row-gap: 5px;
@@ -195,7 +200,6 @@ header menu a:hover{
     align-content: center;
     position: relative;
     height: 200px;
-    width: 200px;
     border-radius: 25px 25px 0 25px;
 }
 .card-image .card-img{
@@ -203,9 +207,14 @@ header menu a:hover{
     width: 100%;
     object-fit: cover;
     border-radius: 25px 25px 0 25px;
+    user-select: none;
 }
 
 .nome{
+    color: #e5d3ba;
+}
+.descricao{
+    min-height: 50px;
     color: #e5d3ba;
 }
 .preco{
@@ -221,6 +230,7 @@ header menu a:hover{
     background-color: #e5d3ba;
     color: #181f27;
     transition: all .3s ease;
+    user-select: none;
 }
 .button:hover{
     background-color: #181f27;
