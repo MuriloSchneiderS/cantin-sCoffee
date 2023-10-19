@@ -17,6 +17,7 @@ html{
 }
 body{
     background-color: #e5d3ba;
+    color: #181f27;
     font-family: 'Roboto';
 }
 h1{
@@ -29,6 +30,14 @@ h1, h2{
     font-family: 'Arapey';
     font-weight: bolder;
 }
+hr{
+    width: 100%;
+    padding: 2px;
+    background: linear-gradient(to right, #181f27, #e5d3ba);
+    border: 1px transparent;
+    border-radius: 10%;
+}
+
 /*CABEÇALHO*/
 header{
     background-color: #181f27;
@@ -98,7 +107,6 @@ header menu a:hover{
 /*CORPO*/
 .banner{
     display: block;
-    pointer-events: none;
     position: relative;
     width: 100%;
     pointer-events: none;
@@ -120,27 +128,34 @@ header menu a:hover{
     image-rendering:crisp-edges;
 }
 
-.recomendados{
-    min-height: 100vh;
+.menu{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+}
+.cardapio{
+    width: 80%;
+}
+
+.carrossel{
+    min-height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
 }
 .card{
-    width: 180px;
+    width: 200px;
     border-radius: 15px;
     background-color: #181f27;
     color: #e5d3ba;
 }
-.image-content, .card-content{
+.card-content{
     display: flex;
     flex-direction: column;
     align-items: left;
     padding: 10px 15px;
-}
-.image-content{
-    position: relative;
-    row-gap: 5px;
 }
 .card-content h2, .card-content p, .card-content .button{
     z-index: 2;
@@ -154,26 +169,26 @@ header menu a:hover{
     background-color: #e5d3ba;
     border-radius: 10px 10px 0 25px;
 }
-.overlay::before, .overlay::after{
+.overlay::after{
     content: '';
     position: absolute;
     right: 0;
     bottom: -40px;
     height: 40px;
     width: 40px;
-    background-color: #e5d3ba;
-}
-.overlay::after{
     border-radius: 0 25px 0 0;
     background-color: #181f27;
+}
+.image-content{
+    position: relative;
+    row-gap: 5px;
 }
 .card-image{
     align-content: center;
     position: relative;
-    height: 165px;
-    width: 165px;
+    height: 200px;
+    width: 200px;
     border-radius: 25px 25px 0 25px;
-    background-color: #e5d3ba;
 }
 .card-image .card-img{
     height: 100%;
