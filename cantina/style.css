@@ -9,6 +9,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 html{
     overflow-x: hidden;
@@ -18,6 +19,17 @@ body{
     background-color: #e5d3ba;
     font-family: 'Roboto';
 }
+h1{
+    font-size: xx-large;
+}
+h2{
+    font-size:x-large;
+}
+h1, h2{
+    font-family: 'Arapey';
+    font-weight: bolder;
+}
+/*CABEÇALHO*/
 header{
     background-color: #181f27;
     color: #e5d3ba;
@@ -34,6 +46,7 @@ header .logo a{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: 'Arapey';
 }
 header .logo img{
     height: 75px;
@@ -48,6 +61,7 @@ header .logo img{
     width: 50%;
     padding: 20px 0;
     margin: 0 25px;
+    border-radius: 10px;
 }
 header menu{
     width: 50%;
@@ -81,6 +95,7 @@ header menu a:hover{
     color: #181f27;*/
 }
 
+/*CORPO*/
 .banner{
     display: block;
     pointer-events: none;
@@ -105,18 +120,92 @@ header menu a:hover{
     image-rendering:crisp-edges;
 }
 
-.menu{
+.recomendados{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 180px;
+    border-radius: 15px;
+    background-color: #181f27;
+    color: #e5d3ba;
+}
+.image-content, .card-content{
     display: flex;
     flex-direction: column;
-    
-    min-width: 500px;
-    max-width: 1800px;
+    align-items: left;
+    padding: 10px 15px;
 }
-.grid{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
+.image-content{
+    position: relative;
+    row-gap: 5px;
+}
+.card-content h2, .card-content p, .card-content .button{
+    z-index: 2;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #e5d3ba;
+    border-radius: 10px 10px 0 25px;
+}
+.overlay::before, .overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #e5d3ba;
+}
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #181f27;
+}
+.card-image{
+    align-content: center;
+    position: relative;
+    height: 165px;
+    width: 165px;
+    border-radius: 25px 25px 0 25px;
+    background-color: #e5d3ba;
+}
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px 25px 0 25px;
 }
 
+.nome{
+    color: #e5d3ba;
+}
+.preco{
+    color: #e5d3ba;
+}
+.button{
+    border: none;
+    font-size: 25px;
+    padding: 0 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    border: 2px solid #e5d3ba;
+    background-color: #e5d3ba;
+    color: #181f27;
+    transition: all .3s ease;
+}
+.button:hover{
+    background-color: #181f27;
+    color: #e5d3ba;
+    cursor: pointer;
+}
+
+/*RODAPÉ*/
 footer{
     display: flex;
     flex-direction: row;
