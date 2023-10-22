@@ -98,10 +98,79 @@ header menu a{
 header menu a:hover{
     background-size: 100% 100%;
     color: #181f27;
-    /*background-color: #e5d3ba;
-    color: #181f27;*/
 }
 
+.nav-list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: #181f27;
+    color: #e5d3ba;
+}
+.nav-link{
+    text-decoration: none;
+    color: #e5d3ba;
+}
+.mobile-menu-icon{
+    display: none;
+}
+.mobile-menu {
+    display: none;
+}
+@media screen and (max-width: 1250px){
+    .mobile-menu.open {
+        display: block;
+        position: sticky;
+        top: 75px;
+        z-index: 5;
+        background-color: #181f27;
+        color: #e5d3ba;
+    }
+    header menu{
+        display: none;
+    }
+    .mobile-menu-icon{
+        display: block;
+    }
+    .mobile-menu-icon .icon{
+        position: relative;
+        top: 2px;
+        width: auto;
+        height: 75px;
+    }
+    .mobile-menu-icon .icon:hover{
+        box-shadow: 0 2px #e5d3ba;
+    }
+    .mobile-menu-icon button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 3rem;
+        border-top: 1px solid #e5d3ba;
+    }
+    .nav-item{
+        display: block;
+        justify-content: space-around;
+        height: 0;
+        width: 100%;
+        padding: 2rem 0;
+    }
+    .nav-link{
+        display: list-item;
+        position: relative;
+        padding: 1.5rem 0;
+    }
+    .nav-link:hover{
+        background-color: #e5d3ba;
+        color: #181f27;
+    }
+}
 /*CORPO*/
 .banner{
     display: block;
@@ -122,8 +191,6 @@ header menu a:hover{
     z-index: 2;
     padding: 5% 42%;
     background: radial-gradient(#e5d3ba80, transparent, transparent);
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering:crisp-edges;
 }
 
 .menu{

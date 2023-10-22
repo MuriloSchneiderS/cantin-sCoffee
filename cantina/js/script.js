@@ -1,3 +1,15 @@
+function menuShow(){
+  let mobileMenu = document.querySelector(".mobile-menu");
+  if (mobileMenu.classList.contains("open")){
+    mobileMenu.classList.remove("open");
+    document.querySelector(".icon").src = "images/menu-icone.png";
+  } else {
+    mobileMenu.classList.add("open");
+    document.querySelector(".icon").src = "images/menu-close-icon.png";
+  }
+}
+
+/*SWIPERJS*/
 var swiperRecomendados = new Swiper('.slider-recomendados', {
     slidesPerView: 4,
     spaceBetween: 25,
