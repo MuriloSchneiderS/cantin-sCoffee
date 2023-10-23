@@ -181,16 +181,22 @@ header menu a:hover{
 }
 .banner .background{
     object-fit:cover;
-    object-position: 100% 100%;
+    object-position: 50% 100%;
     width: 100%;
     height: 625px;
 }
-.banner .logo{
+.logo-banner{
     display: flex;
     position: absolute;
+    justify-content: center;
+    align-items: center;
     z-index: 2;
-    padding: 5% 42%;
+    width: 100%;
+    height: 625px;
     background: radial-gradient(#e5d3ba80, transparent, transparent);
+}
+.logo-banner .logo{
+    position: absolute;
 }
 
 .menu{
@@ -223,7 +229,7 @@ header menu a:hover{
       transform: rotate(90deg);
     }
     .cardapio{
-        width: 95%;
+        width: 70%;
     }
     .slide-content{
         padding-right: 0 !important;
@@ -264,6 +270,7 @@ swiper-button-prev{
 }
 .card{
     height: fit-content;
+    max-height: 40%;
     border-radius: 25px 25px 10px 10px;
     margin: 0 15px;
     background-color: #181f27;
@@ -274,6 +281,8 @@ swiper-button-prev{
     flex-direction: column;
     align-items: left;
     padding: 10px 15px;
+    height: 60%;
+    justify-content: space-between;
 }
 .card-content h2, .card-content p, .card-content .button{
     z-index: 2;
@@ -303,11 +312,17 @@ swiper-button-prev{
     min-height: 50px;
     color: #e5d3ba;
 }
+.valor{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 10px 15px;
+    width: 100%;
+}
 .preco{
     color: #e5d3ba;
 }
-.button{
-    bottom: 0;
+.button{    
     border: none;
     font-size: 25px;
     padding: 0 15px;
