@@ -18,7 +18,7 @@ public class AdmController {
 
     @GetMapping("/adm/login")
     public String loginAdm() {
-        return "loginAdm";
+        return "amdLogin";
     }
 
     @PostMapping("/loginAdm")

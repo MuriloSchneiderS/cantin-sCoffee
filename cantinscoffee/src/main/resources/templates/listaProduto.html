@@ -6,6 +6,13 @@
     <title>Lista de Produtos</title>
 </head>
 <body>
+<!--
+    <form method="POST" action="/busca">
+        <label>Buscar produto</label>
+        <input name="produtopesquisa">
+        <input type="submit" value="Buscar">
+    </form>
+-->
     <table>
         <thead>
             <tr>
@@ -31,7 +38,6 @@
                 
                 <td><a th:href="@{'/adm/produto/excluir/' +${p.idProduto}}">Excluir</a></td>
             </tr>
-
         </tbody>
     </table>
 </body>
