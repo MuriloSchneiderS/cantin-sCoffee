@@ -21,6 +21,7 @@ body{
     color: #181f27;
     font-family: 'Roboto';
     overflow-x: hidden;
+    min-width: 735px;
     max-width: 100vw;
 }
 h1{
@@ -300,7 +301,6 @@ header menu a:hover{
 .carrinho ul{
     overflow-y: auto;
     overflow-x: hidden;
-    cursor: grab;
 }
 
 .carrinho .carrinho-item{ 
@@ -312,6 +312,7 @@ header menu a:hover{
     border-radius: 25px 10px 10px 25px;
     background-color: var(--cor-secundaria);
     box-shadow: 0 4px 10px var(--cor-fundo);
+    user-select: none;
 }
 
 .carrinho .carrinho-item .imagem{ 
@@ -319,6 +320,7 @@ header menu a:hover{
     justify-content: flex-end;
     align-items: center;
     width: 10vw;
+    pointer-events: none;
 }
 .carrinho .carrinho-item img{ 
     object-fit: cover;
