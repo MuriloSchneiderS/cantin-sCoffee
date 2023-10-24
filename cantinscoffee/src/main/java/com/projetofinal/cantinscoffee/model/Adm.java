@@ -1,7 +1,13 @@
 package com.projetofinal.cantinscoffee.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Adm {
+    @Id
     private int admId;
+
     private String loginAdm;
     private String senhaAdm;
 

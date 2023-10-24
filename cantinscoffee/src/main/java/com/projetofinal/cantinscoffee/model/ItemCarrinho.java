@@ -1,6 +1,11 @@
 package com.projetofinal.cantinscoffee.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class ItemCarrinho {
+    @Id
     private int idItemCarrinho;
     private int carrinhoId;
     private int produtoId;

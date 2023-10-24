@@ -18,6 +18,11 @@ public class ClienteController {
     @Autowired
     ClienteRepository repository;
 
+    @GetMapping("/index")
+    public String index() {
+        return "index";
+    }
+
     @GetMapping("/cliente/cadastro")
     public String cadastro() {
         return "cadastroCliente";
@@ -26,8 +31,7 @@ public class ClienteController {
     @PostMapping("/cadastroCliente")
     public String cadastroCliente(Cliente cliente) {
         repository.save(cliente);
-        return "redirect:/cliente/cadastro"; // a principio poderia ir pra página de cardápio, criar redirect
-                                // para esse caso com um método /cardápio por exemplo
+        return "redirect:/index";
     }
 
     @GetMapping("/adm/cliente/lista")
@@ -39,13 +43,13 @@ public class ClienteController {
         mv.addObject("clientes", clientes);
         return mv;
     }
-    
+
     @GetMapping("/adm/cliente/excluir/{idCliente}")
     public String excluir(@PathVariable("idCliente") int idCliente) {
         repository.deleteById(idCliente);
         return "redirect:/adm/cliente/lista";
     }
-     
+
     @GetMapping("/cliente/login")
     public String login() {
         return "loginCliente";
@@ -58,7 +62,7 @@ public class ClienteController {
 
         for (Cliente c : clientes) {
             if (c.getLogin().equals(cliente.getLogin()) && c.getSenha().equals(cliente.getSenha())) {
-                return "redirect:/cliente";
+                return "redirect:/index";
             }
         }
         return "redirect:/cliente/login";

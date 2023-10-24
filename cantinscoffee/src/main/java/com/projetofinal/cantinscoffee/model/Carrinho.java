@@ -1,6 +1,11 @@
 package com.projetofinal.cantinscoffee.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Carrinho {
+    @Id
     private int idCarrinho;
     private int localdatetime;
     private float total;

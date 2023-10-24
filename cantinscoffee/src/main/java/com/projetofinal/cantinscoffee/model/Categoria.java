@@ -1,6 +1,11 @@
 package com.projetofinal.cantinscoffee.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Categoria {
+    @Id
     private int idCategoria;
     private String nomeCategoria;
 
