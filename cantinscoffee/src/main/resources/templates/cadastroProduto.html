@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link href="../static/css/estilos.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h1>Cadastro de Produto</h1>
+        <form method="POST" action="/cadastroProduto">
+            <fieldset class="novoCadastroProduto"><!--Pode mudar o nome da classe para usar css-->
+                <legend>Novo Produto</legend>
+                <label>Nome:</label>
+                <input type="text" name="nomeProduto"><br>
+                <label>Descricao: </label>
+                <input type="text" name="descricao"><br>
+                <label>Ativo: </label>
+                <input type="text" name="ativo"><br><!--Mudar o metodo de inserção para radio ou algo assim-->
+                <label>Estoque: </label>
+                <input type="text" name="estoque"><br><!--Alterar para algum metodo de inserção numerico se quiser-->
+                <label>Preço: </label>
+                <input type="text" name="preco"><br><!--Alterar para algum metodo de inserção numerico se quiser-->
+                <label>categoriaId: </label>
+                <input type="text" name="categoriaId"><br><!----><!--TALVEZ buscar de uma lista pré-definida TALVEZ buscar dos cadastros já existentes na entidade CATEGORIA-->
+                
+                <button class="botao" type="submit">Cadastrar</button>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
