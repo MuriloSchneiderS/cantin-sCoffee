@@ -9,6 +9,16 @@ function menuShow(){
   }
 }
 
+function sacolaShow(){
+  let sacola = document.querySelector(".pop-carrinho");
+  sacola.classList.toggle("open")
+  blurBg();
+}
+function blurBg(){
+  let bg = document.getElementById("bg");
+  bg.classList.toggle("blur");
+}
+
 /*SWIPERJS*/
 var swiperRecomendados = new Swiper('.slider-recomendados', {
     slidesPerView: 4,
