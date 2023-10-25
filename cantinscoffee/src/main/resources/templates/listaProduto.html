@@ -4,15 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Produtos</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!--
-    <form method="POST" action="/busca">
-        <label>Buscar produto</label>
-        <input name="produtopesquisa">
-        <input type="submit" value="Buscar">
-    </form>
--->
+    
     <table>
         <thead>
             <tr>
@@ -40,5 +35,38 @@
             </tr>
         </tbody>
     </table>
+<!-- TESTE DE BUSCA, não funcionou
+    
+    <form method="POST" action="/adm/produto/lista/busca">
+        <label>Buscar produto</label>
+        <input name="produtoPesquisa">
+        <input type="submit" value="Buscar">
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>-</th>
+                <th>Nome</th>
+                <th>Descricao</th>
+                <th>Ativo</th>
+                <th>Estoque</th>
+                <th>Preco</th>
+                <th>categoriaId</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-th-each="b: ${produtosbusca}">
+                <td data-th-text="${b.idProduto}"></td>
+                <td data-th-text="${b.nomeProduto}"></td>
+                <td data-th-text="${b.descricao}"></td>
+                <td data-th-text="${b.ativo}"></td>
+                <td data-th-text="${b.estoque}"></td>
+                <td data-th-text="${b.preco}"></td>
+                <td data-th-text="${b.categoriaId}"></td>
+            </tr>
+        </tbody>
+    </table>
+-->
 </body>
 </html>
