@@ -417,11 +417,11 @@ header menu a:hover{
 }
 @media (max-width: 760px) {
     .swiper-button-next {
-      right: 10px;
+      right: 15px;
       transform: rotate(90deg);
     }
     .swiper-button-prev {
-      left: 10px;
+      bottom: 41px;
       transform: rotate(90deg);
     }
     .cardapio{
@@ -446,12 +446,6 @@ header menu a:hover{
     text-shadow: 0 0 5px #181f27;
     font-weight: 100;
     font-size: small;
-}
-swiper-button-next{
-    right: 0;
-}
-swiper-button-prev{
-    left: 0;
 }
 
 .slide-container{
