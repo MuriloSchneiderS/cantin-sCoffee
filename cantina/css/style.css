@@ -331,7 +331,7 @@ header menu a:hover{
 .carrinho .carrinho-item .info{ 
     width: 70%; 
     height: 100%;
-    padding: 14px; 
+    border: 14px solid transparent; 
     color: var(--cor-primaria);
 }
 
@@ -342,16 +342,22 @@ header menu a:hover{
 
 .carrinho .carrinho-item .preco{ 
     color: var(--cor-primaria);
-    margin-top: 8px;
+    bottom: 0;
 }
-
+.preco p{
+    position: absolute;
+    margin-top: 15px;
+    bottom: 6px;
+    background: #e5d3baac;
+}
 .carrinho .carrinho-item .contador{ 
     position: absolute;
     right: 15px;
     bottom: 0;
+    margin-top: 15px;
+    text-align: center;
 }
-
-.carrinho .carrinho-item .contador i{ 
+.carrinho .carrinho-item .contador .bx{ 
     cursor: pointer;
     width: 25px; 
     height: 35px; 
@@ -365,14 +371,16 @@ header menu a:hover{
     border-bottom: none;
     border-radius: 8px 8px 0 0;
 }
-.carrinho .carrinho-item .contador i:hover{ 
+.carrinho .carrinho-item .contador .bx:hover{ 
     color: var(--cor-primaria);
     background: var(--cor-secundaria);
 }
-
-.carrinho .carrinho-item .contador span{ 
+.carrinho .carrinho-item .contador .quantidade{ 
+    max-width: 25px;
     margin: 0 6px; 
     font: 700 1rem; 
+    text-align: center;
+    background: #e5d3baac;
     color: var(--cor-primaria);
 }
 

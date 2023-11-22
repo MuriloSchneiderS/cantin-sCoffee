@@ -1,3 +1,26 @@
+const menos = document.getElementsByName("menos"), 
+quantidade = document.getElementsByName("quantidade"), 
+mais = document.getElementsByName("mais");
+let quarray=[];
+for(let i=0; i<menos.length; i++){
+  let men = menos[i], mai = mais[i], qua = quantidade[i], q = quarray[i];
+  q = 1;
+  mai.addEventListener("click", ()=>{
+    q++;
+    console.log(q);
+    qua.innerText = q;
+  });
+  men.addEventListener("click", ()=>{
+    q--;
+    console.log(q);
+    return (q<1 ? removeIf(qua) : qua.innerText = q);
+  });
+}
+function removeIf(quantia){
+  /*remover <li>..</li> do HTML*/
+  quantia.parentElement.parentElement.parentElement.parentElement.remove();
+}
+/*Mobile Menu*/
 function menuShow(){
   let mobileMenu = document.querySelector(".mobile-menu");
   if (mobileMenu.classList.contains("open")){
@@ -8,7 +31,7 @@ function menuShow(){
     document.querySelector(".icon").src = "images/menu-close-icon.png";
   }
 }
-
+/*Sacola*/
 function sacolaShow(){
   let sacola = document.querySelector(".pop-carrinho");
   sacola.classList.toggle("open")
@@ -18,7 +41,6 @@ function blurBg(){
   let bg = document.getElementById("bg");
   bg.classList.toggle("blur");
 }
-
 /*SWIPERJS*/
 var swiperRecomendados = new Swiper('.slider-recomendados', {
     slidesPerView: 4,
