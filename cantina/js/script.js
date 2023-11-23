@@ -1,36 +1,31 @@
-const menos = document.getElementsByName("menos"), 
-quantidade = document.getElementsByName("quantidade"), 
-mais = document.getElementsByName("mais");
-let quarray=[];
-for(let i=0; i<menos.length; i++){
-  let men = menos[i], mai = mais[i], qua = quantidade[i], q = quarray[i];
-  q = 1;
-  mai.addEventListener("click", ()=>{
-    q++;
-    console.log(q);
-    qua.innerText = q;
-  });
-  men.addEventListener("click", ()=>{
-    q--;
-    console.log(q);
-    return (q<1 ? removeIf(qua) : qua.innerText = q);
-  });
+/*MAIN*/
+if(document.readyState == "loading"){
+  document.addEventListener("DOMContentLoaded",ready)
+}else{
+  ready()
 }
-function removeIf(quantia){
-  /*remover <li>..</li> do HTML*/
-  quantia.parentElement.parentElement.parentElement.parentElement.remove();
-}
-/*Mobile Menu*/
-function menuShow(){
-  let mobileMenu = document.querySelector(".mobile-menu");
-  if (mobileMenu.classList.contains("open")){
-    mobileMenu.classList.remove("open");
-    document.querySelector(".icon").src = "images/menu-icone.png";
-  } else {
-    mobileMenu.classList.add("open");
-    document.querySelector(".icon").src = "images/menu-close-icon.png";
+function ready(){
+  updateTotal();
+  const menos = document.getElementsByName("menos"), 
+  quantidade = document.getElementsByName("quantidade"), 
+  mais = document.getElementsByName("mais");
+  let quarray=[];
+  for(let i=0; i<menos.length; i++){
+    let men = menos[i], mai = mais[i], qua = quantidade[i], q = quarray[i];
+    q = 1;
+    mai.addEventListener("click", ()=>{
+      q++;
+      qua.innerText = q;
+      return updateTotal();
+    });
+    men.addEventListener("click", ()=>{
+      q--;
+      (q<1) ? removeProduct(qua) : qua.innerText = q;
+      return updateTotal();
+    });
   }
 }
+/*FUNÇÕES*/
 /*Sacola*/
 function sacolaShow(){
   let sacola = document.querySelector(".pop-carrinho");
@@ -40,6 +35,34 @@ function sacolaShow(){
 function blurBg(){
   let bg = document.getElementById("bg");
   bg.classList.toggle("blur");
+}
+function removeProduct(quantia){
+  /*remover <li>..</li> do HTML*/
+  quantia.parentElement.parentElement.parentElement.parentElement.remove();
+}
+function updateTotal(){
+  const cartProducts = document.getElementsByClassName("carrinho-item");
+  let totalAmount = 0;
+  for (let i=0; i<cartProducts.length; i++){
+    const productPrice = cartProducts[i].getElementsByClassName("item-preco")[0].innerText.replace(",","."),
+    productQuantity = cartProducts[i].getElementsByClassName("quantidade")[0].innerText;
+    
+    totalAmount += (productPrice * productQuantity);
+  }
+  totalAmount = totalAmount.toFixed(2);
+  totalAmount = totalAmount.replace(".",",");
+  document.getElementsByClassName("carrinho-total")[0].innerText = totalAmount;
+}
+/*Menu Mobile*/
+function menuShow(){
+  let mobileMenu = document.querySelector(".mobile-menu");
+  if (mobileMenu.classList.contains("open")){
+    mobileMenu.classList.remove("open");
+    document.querySelector(".icon").src = "images/menu-icone.png";
+  } else {
+    mobileMenu.classList.add("open");
+    document.querySelector(".icon").src = "images/menu-close-icon.png";
+  }
 }
 /*SWIPERJS*/
 var swiperRecomendados = new Swiper('.slider-recomendados', {
