@@ -90,17 +90,15 @@ header .logo img{
     height: 65%;
     width: 50%;
     padding: 20px 0;
-    margin: 0 25px;
     border-radius: 10px;
 }
 header menu{
     width: 50%;
-    padding: 25px;
 }
 header ul{
     display: flex;
     list-style: none;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 15px;
 }
 header ul li{
@@ -192,6 +190,13 @@ header menu a:hover{
     .nav-link:hover{
         background-color: #e5d3ba;
         color: #181f27;
+    }
+    footer{
+        flex-direction: column !important;
+        justify-content: space-evenly !important;
+        align-items: start !important;
+        width: 100%;
+        padding: 50px;
     }
 }
 /*CORPO*/
@@ -570,4 +575,10 @@ footer{
 .sobre img{
     object-fit: scale-down;
     padding: 25px 15px 25px 0;
+}
+.horario{
+    padding: 15px 15px 15px 0;
+}
+.faleconosco{
+    padding: 15px 15px 0 0;
 }

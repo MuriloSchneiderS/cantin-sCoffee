@@ -5,6 +5,22 @@ if(document.readyState == "loading"){
   ready()
 }
 function ready(){
+  const searchbar = document.getElementsByClassName("barra-pesquisa")[0],
+  items = document.getElementsByClassName("add-button");
+  searchbar.addEventListener("keyup", ()=>{
+    let input = searchbar.value.toLowerCase(),
+    nomes=[];
+    if(input=="")
+      return;/*cancela a busca quando o usuário apaga a pesquisa*/
+    for(let i=0; i<items.length; i++){
+      nomes[i]=items[i].id.replace("-"," ")/*transforma o id em um nome simples para localizar a pesquisa*/
+      if(nomes[i].includes(input)){
+        document.location.hash = `#${items[i].id}`;/*redireciona para o primeiro item encontrado semelhante à pesquisa*/
+        return document.location.hash = `#${searchbar.id}`;/*redireciona o foco de volta para a barra de pesquisa*/
+      }
+    }
+  });
+
   var totalAmount = "0,00";
   updateTotal();
 
@@ -32,10 +48,10 @@ function ready(){
       let types = thisInfos.getElementsByClassName("menu-card-tipo")[0];
       types==undefined ? types="" : types=types.innerText;/*testa se há multiplas opções - tipos é undefined -*/
       
-      const cartTitles = document.getElementsByClassName("cart-title");
-      for(let c=0; c<cartTitles.length; c++){
-        if(cartTitles[c].innerText == titles){
-          cartTitles[c].parentElement.getElementsByClassName("quantidade")[0].innerText++;
+      let cartItems = document.getElementsByClassName("carrinho-item");
+      for(let c=0; c<cartItems.length; c++){
+        if(cartItems[c].id == btnId){
+          cartItems[c].getElementsByClassName("quantidade")[0].innerText++;
           return updateTotal();
         }
       }
