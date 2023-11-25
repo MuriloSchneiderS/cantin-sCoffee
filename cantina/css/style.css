@@ -297,6 +297,15 @@ header menu a:hover{
     text-align: center;
     color: var(--cor-secundaria);
 }
+.input-cliente{
+    background-color: transparent;
+    border: solid 2px #e5d3ba;
+    color: #e5d3ba;
+    min-height: 30px;
+    width: 60%;
+    border-radius: 5px;
+    font-size: 20px;
+}
 
 .carrinho ul{
     overflow-y: auto;
@@ -319,7 +328,7 @@ header menu a:hover{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 10vw;
+    width: 65%;
     pointer-events: none;
 }
 .carrinho .carrinho-item img{ 
@@ -329,15 +338,16 @@ header menu a:hover{
     border-radius: 25px 0 0 25px;
 }
 .carrinho .carrinho-item .info{ 
-    width: 70%; 
+    width: 100%; 
     height: 100%;
     border: 14px solid transparent; 
+    border-right-width: 5px;
     color: var(--cor-primaria);
 }
 
 .carrinho .carrinho-item .detalhes{ 
     overflow-y: auto;
-    height: 75%;
+    height: 70%;
 }
 
 .carrinho .carrinho-item .preco{ 
@@ -384,7 +394,7 @@ header menu a:hover{
     color: var(--cor-primaria);
 }
 
-.carrinho .pagar {
+.carrinho .finalizar {
     cursor: pointer;
     width: 100%;
     margin-top: 10px; 
@@ -396,7 +406,7 @@ header menu a:hover{
     transition: 0.3s;
 }
 
-.carrinho .pagar:hover{ 
+.carrinho .finalizar:hover{ 
     background: var(--cor-primaria);
     color: var(--cor-secundaria);
     border-color: var(--cor-secundaria);
@@ -482,7 +492,7 @@ header menu a:hover{
     height: 60%;
     justify-content: space-between;
 }
-.card-content h2, .card-content p, .card-content .button{
+.card-content h2, .card-content p, .card-content .add-button{
     z-index: 2;
 }
 .image-content{
@@ -520,7 +530,7 @@ header menu a:hover{
 .preco{
     color: #e5d3ba;
 }
-.button{    
+.add-button{    
     border: none;
     font-size: 25px;
     padding: 0 15px;
@@ -532,7 +542,7 @@ header menu a:hover{
     transition: all .3s ease;
     user-select: none;
 }
-.button:hover{
+.add-button:hover{
     background-color: #181f27;
     color: #e5d3ba;
     cursor: pointer;
