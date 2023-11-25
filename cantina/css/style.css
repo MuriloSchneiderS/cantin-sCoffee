@@ -318,7 +318,7 @@ header menu a:hover{
     width: 90%;
     margin: 30px;
     height: 20vh;
-    border-radius: 25px 10px 10px 25px;
+    border-radius: 30px 10px 10px 30px;
     background-color: var(--cor-secundaria);
     box-shadow: 0 4px 10px var(--cor-fundo);
     user-select: none;
@@ -478,6 +478,7 @@ header menu a:hover{
 }
 .card{
     height: fit-content;
+    min-height: 420px;
     max-height: 40%;
     border-radius: 30px 30px 10px 10px;
     margin: 0 15px;
@@ -487,9 +488,8 @@ header menu a:hover{
 .card-content{
     display: flex;
     flex-direction: column;
-    align-items: left;
     padding: 10px 15px;
-    height: 60%;
+    min-height: 220px;
     justify-content: space-between;
 }
 .card-content h2, .card-content p, .card-content .add-button{
@@ -520,10 +520,14 @@ header menu a:hover{
     min-height: 50px;
     color: #e5d3ba;
 }
+.valores{
+    
+    width: 100%;
+    bottom: 0;
+}
 .valor{
     display: flex;
     flex-direction: column;
-    align-items: left;
     padding: 10px 15px;
     width: 100%;
 }

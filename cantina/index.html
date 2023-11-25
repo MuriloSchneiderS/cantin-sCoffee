@@ -25,11 +25,9 @@
                     </button>
                     <h2> Sacola de <input type="text" name="cliente" id="cliente" placeholder="Digite seu nome aqui." class="input-cliente"> </h2>
                 </div>   
-                <hr>
                 <ul>
 
                 </ul>
-                <hr>
                 <p>Ao pressionar 'Creditar', seu pedido será enviado e você poderá pagar e recebê-lo no <a href="#sobre" style="color: #fff;">local.</a></p>
                 <button class="finalizar" id="finalizar"><h3>Creditar R$<span class="carrinho-total">0,00</span></h3></button>
             </div>
@@ -49,7 +47,7 @@
                     <li class="nav-item"><a href="#menu" class="nav-link">MENU</a></li>
                     <li class="nav-item"><a href="#sobre" class="nav-link">SOBRE</a></li>
                     <li class="nav-item"><a href="#faleconosco" class="nav-link">CONTATO</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">PERFIL</a></li>
+                    <li class="nav-item"><a href="#ajuda" class="nav-link">AJUDA</a></li>
                 </ul>
             </menu>
             <div class="mobile-menu-icon">
@@ -64,7 +62,7 @@
                     <li class="nav-item"><a href="#menu" class="nav-link">MENU</a></li>
                     <li class="nav-item"><a href="#sobre" class="nav-link">SOBRE</a></li>
                     <li class="nav-item"><a href="#faleconosco" class="nav-link">CONTATO</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">PERFIL</a></li>
+                    <li class="nav-item"><a href="#ajuda" class="nav-link">AJUDA</a></li>
                 </ul>
             </menu>
             <article id="banner" class="banner">
@@ -86,7 +84,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -94,9 +92,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -105,7 +105,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/sanduiche-natural.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/sanduiche-natural.jpg" alt="sanduiche_natural" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -113,9 +113,11 @@
                                                 <h2 class="nome">Sanduíche Natural</h2>
                                                 <p class="descricao">2 Pães de forma,<br>Frango desfiado com maionese Hellmann's, alface e cenoura.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">6,00</span></h3>
-                                                <button id="sanduiche-natural" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">6,00</span></h3>
+                                                    <button id="sanduiche-natural" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -124,7 +126,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/coca-cola.PNG" alt="café cremoso" class="card-img">
+                                                <img src="images/coca-cola.PNG" alt="coca_cola" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -132,17 +134,19 @@
                                                 <h2 class="nome">Coca-Cola</h2>
                                                 <p class="descricao">Refrigerante Coca-Cola,<br>ZERO/Sem açúcar mesmo preço, escolha na cantina.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">5,00</span> - <span class="menu-card-tipo">Caçulinha 200ml</span></h3>
-                                                <button id="refri-caçula" class="add-button" title="adicionar">+</button>
-                                            </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">6,00</span> - <span class="menu-card-tipo">Lata 350ml</span></h3>
-                                                <button id="refri-lata" class="add-button" title="adicionar">+</button>
-                                            </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">7,00</span> - <span class="menu-card-tipo">Garrafa 600ml</span></h3>
-                                                <button id="refri-garrafa" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">5,00</span> - <span class="menu-card-tipo">Caçulinha 200ml</span></h3>
+                                                    <button id="coca-caçula" class="add-button" title="adicionar">+</button>
+                                                </div>
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">6,00</span> - <span class="menu-card-tipo">Lata 350ml</span></h3>
+                                                    <button id="coca-lata" class="add-button" title="adicionar">+</button>
+                                                </div>
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">7,00</span> - <span class="menu-card-tipo">Garrafa 600ml</span></h3>
+                                                    <button id="coca-garrafa" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -151,7 +155,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/banoff.jpg" alt="Banoff" class="card-img">
+                                                <img src="images/banoff.jpg" alt="banoff" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -159,13 +163,15 @@
                                                 <h2 class="nome">Banoff</h2>
                                                 <p class="descricao">Sobremesa de biscoito, camada de doce de leite e banana, coberta com chantilly.<br>Contém glúten e lactose.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">5,00</span> - <span class="menu-card-tipo"></span></h3>
-                                                <button id="banoff5" class="add-button" title="adicionar">+</button>
-                                            </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">6,00</span> - <span class="menu-card-tipo">250ml</span></h3>
-                                                <button id="banoff6" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">5,00</span> - <span class="menu-card-tipo"></span></h3>
+                                                    <button id="banoffP" class="add-button" title="adicionar">+</button>
+                                                </div>
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">6,00</span> - <span class="menu-card-tipo">250ml</span></h3>
+                                                    <button id="banoffM" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -174,7 +180,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/brownie.PNG" alt="Brownie com/sem recheio" class="card-img">
+                                                <img src="images/brownie.PNG" alt="Brownie_com/sem_recheio" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -182,13 +188,15 @@
                                                 <h2 class="nome">Brownie com Ovomaltine</h2>
                                                 <p class="descricao">Casquinha crocante por fora, macio por dentro e com pedaços de chocolate na massa.<br>Recheio aerado de Ovomaltine.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span> - <span class="menu-card-tipo">Sem recheio</span></h3>
-                                                <button id="brownie" class="add-button" title="adicionar">+</button>
-                                            </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">4,00</span> - <span class="menu-card-tipo">Recheado</span></h3>
-                                                <button id="brownie-recheado" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span> - <span class="menu-card-tipo">Sem recheio</span></h3>
+                                                    <button id="brownie-sem-recheio" class="add-button" title="adicionar">+</button>
+                                                </div>
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">4,00</span> - <span class="menu-card-tipo">Recheado</span></h3>
+                                                    <button id="brownie-recheado" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -197,7 +205,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/pastel-assado.png" alt="Pastel Assado" class="card-img">
+                                                <img src="images/pastel-assado.png" alt="pastel_assado" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -205,9 +213,11 @@
                                                 <h2 class="nome">Pastel Assado</h2>
                                                 <p class="descricao">-Frango c/ requeijão<br>-Carne c/ cheddar<br>-Calabresa c/ queijo</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">6,00</span></h3>
-                                                <button id="pastel-assado" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">6,00</span></h3>
+                                                    <button id="pastel-assado" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -216,17 +226,19 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/pastel-frito.png" alt="Pastel Frito" class="card-img">
+                                                <img src="images/cupcake.jpg" alt="cupcake" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
                                             <div class="produto">
-                                                <h2 class="nome">Pastel Frito</h2>
-                                                <p class="descricao">-Carne</p>
+                                                <h2 class="nome">Cupcake</h2>
+                                                <p class="descricao">-Brigadeiro<br>-Chocolate c/ chantily</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">5,00</span></h3>
-                                                <button id="pastel-frito" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">4,00</span></h3>
+                                                    <button id="cupcake" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -235,7 +247,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/torta-fria.jpg" alt="Torta Fria" class="card-img">
+                                                <img src="images/torta-fria.jpg" alt="torta_fria" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -243,9 +255,11 @@
                                                 <h2 class="nome">Torta fria de Pote</h2>
                                                 <p class="descricao">Frango desfiado, Maionese, cenoura.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">5,00</span></h3>
-                                                <button id="torta-fria" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">5,00</span></h3>
+                                                    <button id="torta-fria" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -254,7 +268,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/bolo-pote.jpg" alt="Bolo de pote" class="card-img">
+                                                <img src="images/bolo-pote.jpg" alt="bolo_de_pote" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -262,9 +276,11 @@
                                                 <h2 class="nome">Bolo de pote</h2>
                                                 <p class="descricao">-Brigadeiro<br></p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">4,00</span></h3>
-                                                <button id="bolo-pote" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">4,00</span></h3>
+                                                    <button id="bolo-de-pote" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -273,7 +289,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/empadao.jpg" alt="Empadão" class="card-img">
+                                                <img src="images/empadao.jpg" alt="empadao" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -281,9 +297,11 @@
                                                 <h2 class="nome">Empadão</h2>
                                                 <p class="descricao">-Frango</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">6,50</span></h3>
-                                                <button id="empadao" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">6,50</span></h3>
+                                                    <button id="empadao" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -306,7 +324,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -314,9 +332,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -325,7 +345,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/coca-cola.PNG" alt="Coca-Cola - Lata/Garrafa/Caçulinha" class="card-img">
+                                                <img src="images/coca-cola.PNG" alt="coca_cola" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -333,36 +353,19 @@
                                                 <h2 class="nome">Coca-Cola</h2>
                                                 <p class="descricao">Refrigerante Coca-Cola,<br>ZERO/Sem açúcar mesmo preço, escolha na cantina.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">5,00</span> - <span class="menu-card-tipo">Caçulinha 200ml</span></h3>
-                                                <button id="refri-caçula" class="add-button" title="adicionar">+</button>
-                                            </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">6,00</span> - <span class="menu-card-tipo">Lata 350ml</span></h3>
-                                                <button id="refri-lata" class="add-button" title="adicionar">+</button>
-                                            </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">7,00</span> - <span class="menu-card-tipo">Garrafa 600ml</span></h3>
-                                                <button id="refri-garrafa" class="add-button" title="adicionar">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card swiper-slide">
-                                        <div class="image-content">
-                                            <span class="overlay"></span>
-                                            
-                                            <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
-                                            </div>
-                                        </div>
-                                        <div class="card-content">
-                                            <div class="produto">
-                                                <h2 class="nome">Café Cremoso</h2>
-                                                <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
-                                            </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">5,00</span> - <span class="menu-card-tipo">Caçulinha 200ml</span></h3>
+                                                    <button id="coca-caçula" class="add-button" title="adicionar">+</button>
+                                                </div>
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">6,00</span> - <span class="menu-card-tipo">Lata 350ml</span></h3>
+                                                    <button id="coca-lata" class="add-button" title="adicionar">+</button>
+                                                </div>
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">7,00</span> - <span class="menu-card-tipo">Garrafa 600ml</span></h3>
+                                                    <button id="coca-garrafa" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -371,7 +374,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -379,9 +382,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -390,7 +395,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -398,9 +403,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -409,7 +416,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -417,9 +424,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -428,7 +437,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -436,9 +445,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -447,7 +458,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -455,9 +466,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -466,7 +479,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -474,9 +487,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -485,7 +500,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -493,9 +508,32 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card swiper-slide">
+                                        <div class="image-content">
+                                            <span class="overlay"></span>
+                                            
+                                            <div class="card-image">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
+                                            </div>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="produto">
+                                                <h2 class="nome">Café Cremoso</h2>
+                                                <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
+                                            </div>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -518,7 +556,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/sanduiche-natural.jpg" alt="Sanduíche Natural" class="card-img">
+                                                <img src="images/sanduiche-natural.jpg" alt="sanduiche_natural" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -526,9 +564,11 @@
                                                 <h2 class="nome">Sanduíche Natural</h2>
                                                 <p class="descricao">2 Pães de forma,<br>Frango desfiado com maionese Hellmann's, alface e cenoura.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">6,00</span></h3>
-                                                <button id="sanduiche-natural" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">6,00</span></h3>
+                                                    <button id="sanduiche-natural" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -537,7 +577,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/pastel-assado.png" alt="Pastel Assado" class="card-img">
+                                                <img src="images/pastel-assado.png" alt="pastel_assado" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -545,9 +585,11 @@
                                                 <h2 class="nome">Pastel Assado</h2>
                                                 <p class="descricao">-Frango c/ requeijão<br>-Carne c/ cheddar<br>-Calabresa c/ queijo</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">6,00</span></h3>
-                                                <button id="pastel-assado" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">6,00</span></h3>
+                                                    <button id="pastel-assado" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -556,7 +598,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/pastel-frito.png" alt="Pastel Frito" class="card-img">
+                                                <img src="images/pastel-frito.png" alt="pastel_frito" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -564,9 +606,11 @@
                                                 <h2 class="nome">Pastel Frito</h2>
                                                 <p class="descricao">-Carne</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">5,00</span></h3>
-                                                <button id="pastel-frito" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">5,00</span></h3>
+                                                    <button id="pastel-frito" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -575,7 +619,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/torta-fria.jpg" alt="Torta Fria" class="card-img">
+                                                <img src="images/torta-fria.jpg" alt="torta_fria" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -583,9 +627,11 @@
                                                 <h2 class="nome">Torta fria de Pote</h2>
                                                 <p class="descricao">Frango desfiado, Maionese, cenoura.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">5,00</span></h3>
-                                                <button id="torta-fria" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">5,00</span></h3>
+                                                    <button id="torta-fria" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -594,7 +640,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/empadao.jpg" alt="Empadão" class="card-img">
+                                                <img src="images/empadao.jpg" alt="empadao" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -602,9 +648,11 @@
                                                 <h2 class="nome">Empadão</h2>
                                                 <p class="descricao">-Frango</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">6,50</span></h3>
-                                                <button id="empadao" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">6,50</span></h3>
+                                                    <button id="empadao" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -613,7 +661,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -621,9 +669,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -632,7 +682,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -640,9 +690,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -651,7 +703,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -659,9 +711,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -670,7 +724,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -678,9 +732,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -689,7 +745,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -697,9 +753,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -708,7 +766,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -716,9 +774,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -741,7 +801,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/banoff.jpg" alt="Banoff" class="card-img">
+                                                <img src="images/banoff.jpg" alt="banoff" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -749,13 +809,15 @@
                                                 <h2 class="nome">Banoff</h2>
                                                 <p class="descricao">Sobremesa de biscoito, camada de doce de leite e banana, coberta com chantilly.<br>Contém glúten e lactose.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">5,00</span> - <span class="menu-card-tipo"></span></h3>
-                                                <button id="banoff5" class="add-button" title="adicionar">+</button>
-                                            </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">6,00</span> - <span class="menu-card-tipo">250ml</span></h3>
-                                                <button id="banoff6" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">5,00</span> - <span class="menu-card-tipo"></span></h3>
+                                                    <button id="banoffP" class="add-button" title="adicionar">+</button>
+                                                </div>
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">6,00</span> - <span class="menu-card-tipo">250ml</span></h3>
+                                                    <button id="banoffM" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -764,7 +826,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/brownie.PNG" alt="Brownie com/sem recheio" class="card-img">
+                                                <img src="images/brownie.PNG" alt="Brownie_com/sem_recheio" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -772,13 +834,15 @@
                                                 <h2 class="nome">Brownie com Ovomaltine</h2>
                                                 <p class="descricao">Casquinha crocante por fora, macio por dentro e com pedaços de chocolate na massa.<br>Recheio aerado de Ovomaltine.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span> - <span class="menu-card-tipo">Sem recheio</span></h3>
-                                                <button id="brownie" class="add-button" title="adicionar">+</button>
-                                            </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">4,00</span> - <span class="menu-card-tipo">Recheado</span></h3>
-                                                <button id="brownie-recheado" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span> - <span class="menu-card-tipo">Sem recheio</span></h3>
+                                                    <button id="brownie-sem-recheio" class="add-button" title="adicionar">+</button>
+                                                </div>
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">4,00</span> - <span class="menu-card-tipo">Recheado</span></h3>
+                                                    <button id="brownie-recheado" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -787,7 +851,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/bolo-pote.jpg" alt="Bolo de pote" class="card-img">
+                                                <img src="images/bolo-pote.jpg" alt="bolo_de_pote" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -795,9 +859,11 @@
                                                 <h2 class="nome">Bolo de pote</h2>
                                                 <p class="descricao">-Brigadeiro<br></p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">4,00</span></h3>
-                                                <button id="bolo-pote" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">4,00</span></h3>
+                                                    <button id="bolo-de-pote" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -806,7 +872,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cupcake.jpg" alt="Cupcake" class="card-img">
+                                                <img src="images/cupcake.jpg" alt="cupcake" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -814,9 +880,11 @@
                                                 <h2 class="nome">Cupcake</h2>
                                                 <p class="descricao">-Brigadeiro<br>-Chocolate c/ chantily</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">4,00</span></h3>
-                                                <button id="cupcake" class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">4,00</span></h3>
+                                                    <button id="cupcake" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -825,7 +893,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -833,9 +901,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -844,7 +914,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -852,9 +922,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -863,7 +935,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -871,9 +943,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -882,7 +956,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -890,9 +964,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -901,7 +977,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -909,9 +985,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -920,7 +998,7 @@
                                             <span class="overlay"></span>
                                             
                                             <div class="card-image">
-                                                <img src="images/cafe-cremoso.jpg" alt="café cremoso" class="card-img">
+                                                <img src="images/cafe-cremoso.jpg" alt="cafe_cremoso" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content">
@@ -928,9 +1006,11 @@
                                                 <h2 class="nome">Café Cremoso</h2>
                                                 <p class="descricao">Creme pré-preparado com açúcar e café solúvel.<br>Adicionado <strong>leite</strong> ou <strong>água</strong> fervendo. -Escolhido pelo cliente.</p>
                                             </div>
-                                            <div class="valor">
-                                                <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
-                                                <button class="add-button" title="adicionar">+</button>
+                                            <div class="valores">
+                                                <div class="valor">
+                                                    <h3 class="preco">R$<span class="menu-card-preco">3,50</span></h3>
+                                                    <button id="cafe-cremoso" class="add-button" title="adicionar">+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

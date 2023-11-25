@@ -19,13 +19,14 @@ function ready(){
   for(let i=0; i<addToCartButtons.length; i++){
     addToCartButtons[i].addEventListener("click", (Event)=>{
       const addBtn = Event.target;/*botão clicado*/
-      const allInfos = addBtn.parentElement.parentElement.parentElement,/*todas as informações do card*/
+      const allInfos = addBtn.parentElement.parentElement.parentElement.parentElement,/*todas as informações do card*/
       thisInfos = addBtn.parentElement;/*apenas informações locaisdo card baseado no botão clicado*/
       
       const images = allInfos.getElementsByClassName("card-img")[0].src,
       imagesAlt = allInfos.getElementsByClassName("card-img")[0].alt,
       titles = allInfos.getElementsByClassName("nome")[0].innerText,
-      descriptions = allInfos.getElementsByClassName("descricao")[0].innerText;
+      descriptions = allInfos.getElementsByClassName("descricao")[0].innerText,
+      btnId = thisInfos.getElementsByClassName("add-button")[0].id;
       
       const prices = thisInfos.getElementsByClassName("menu-card-preco")[0].innerText;
       let types = thisInfos.getElementsByClassName("menu-card-tipo")[0];
@@ -40,6 +41,7 @@ function ready(){
       }
       let newCartProduct = document.createElement("li");
       newCartProduct.classList.add("carrinho-item");
+      newCartProduct.setAttribute("id", btnId);
       newCartProduct.innerHTML = 
       `
       <div class="imagem"> 
