@@ -122,24 +122,30 @@ function updateTotal(){
 
 function makePurchase(){
   let nomeCliente = document.getElementsByClassName("input-cliente")[0].value.replace(/\s+/g,"");
-  console.log(nomeCliente)
   if(totalAmount=="0,00")
     return alert("Seu carrinho está vazio!");
   if(nomeCliente=="")
     return alert("É necessário preencher o campo de texto com seu nome!");
   return alert(
     `
-      Obrigado, seu pedido foi realizado, 
-      compareça à Cantin's Coffee para receber e pagar pelo seu pedido.
+      Obrigado, ${nomeCliente}. Seu pedido foi realizado!
+      Compareça à Cantin's Coffee para receber e pagar pelo seu pedido.
       Valor Total: R$${totalAmount}.
     `
   );
 }
 
+const sacola = document.querySelector(".pop-carrinho"),
+ajuda = document.querySelector(".pop-ajuda");
 function sacolaShow(){
-  let sacola = document.querySelector(".pop-carrinho");
+  if(ajuda.classList.contains("open"))
+    ajudaShow();
   sacola.classList.toggle("open")
-  blurBg();
+  return blurBg();
+}
+function ajudaShow(){
+  ajuda.classList.toggle("open")
+  return blurBg();
 }
 function blurBg(){
   let bg = document.getElementById("bg");

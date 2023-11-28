@@ -228,6 +228,29 @@ header menu a:hover{
 }
 
 /*SACOLA / CARRINHO*/
+.pop-ajuda{
+    display: none;
+}
+.pop-ajuda.open{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+}
+.ajuda{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    max-height: 70%;
+    width: 450px;
+    padding: 35px;
+    background: #181f27;
+    color: #e5d3ba;
+    border-radius: 10px;
+}
 .sacola{
     position: fixed;
     top: 20%;
@@ -275,11 +298,15 @@ header menu a:hover{
     border-radius: 10px;
 }
 
-.carrinho .cabecalho-carrinho { 
+.pop-up .cabecalho-pop-up { 
     display: flex;
+    flex-direction: row;
 }
 
-.carrinho .cabecalho-carrinho button{
+.pop-ajuda .fechar-pop-up{
+    position: absolute;
+}
+.pop-up .fechar-pop-up{
    cursor: pointer;
    width: 40px;
    height: 40px;
@@ -291,13 +318,13 @@ header menu a:hover{
    border-radius: 8px 25px 25px 8px;
 }
 
-.carrinho .cabecalho-carrinho button:hover{
+.pop-up .fechar-pop-up:hover{
     color: var(--cor-primaria);
     background: var(--cor-secundaria);
     border-color: var(--cor-primaria);
 }
 
-.carrinho .cabecalho-carrinho h2{ 
+.pop-up .cabecalho-pop-up h1{ 
     margin: auto;
     text-align: center;
     color: var(--cor-secundaria);
@@ -440,18 +467,21 @@ header menu a:hover{
 }
 @media (max-width: 760px) {
     .swiper-button-next {
-      right: 15px;
       transform: rotate(90deg);
     }
     .swiper-button-prev {
-      bottom: 41px;
       transform: rotate(90deg);
     }
     .cardapio{
+        margin-bottom: 5px;
         width: 70%;
     }
     .slide-content{
-        padding-right: 0 !important;
+        padding-right: 30px !important;
+        max-height: 890px !important;
+    }
+    .valores{
+        display: flex;
     }
 }
 .swiper-navBtn{
@@ -482,7 +512,7 @@ header menu a:hover{
     max-height: 1000px;
 }
 .card{
-    height: fit-content;
+    height: fit-content !important;
     min-height: 420px;
     max-height: 40%;
     border-radius: 30px 30px 10px 10px;

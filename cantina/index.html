@@ -19,17 +19,36 @@
         </div>
         <div class="pop-carrinho unblur">
             <div class="carrinho">
-                <div class="cabecalho-carrinho"> 
-                    <button onclick="sacolaShow()" title="Fechar Sacola"> 
+                <div class="cabecalho-pop-up"> 
+                    <button class="fechar-pop-up" onclick="sacolaShow()" title="Fechar Sacola"> 
                         <i class="bx bx-chevron-left"></i>
                     </button>
-                    <h2> Sacola de <input type="text" name="cliente" id="cliente" placeholder="Digite seu nome aqui." class="input-cliente"> </h2>
+                    <h1> Sacola de <input type="text" name="cliente" id="cliente" placeholder="Digite seu nome aqui." class="input-cliente"> </h1>
                 </div>   
                 <ul>
 
                 </ul>
                 <p>Ao pressionar 'Creditar', seu pedido será enviado e você poderá pagar e recebê-lo no <a href="#sobre" style="color: #fff;">local.</a></p>
                 <button class="finalizar" id="finalizar"><h3>Creditar R$<span class="carrinho-total">0,00</span></h3></button>
+            </div>
+        </div>
+    </div>
+    <div class="pop-up">
+        <div class="pop-ajuda unblur">
+            <div class="ajuda">
+                <div class="cabecalho-pop-up">
+                    <button class="fechar-pop-up" onclick="ajudaShow()" title="Fechar Ajuda"> 
+                        <i class="bx bx-chevron-left"></i>
+                    </button>
+                    <h1>Ajuda</h1>
+                </div>
+                <br><br>
+                <p>Selecione os itens desejados clicando em "+" no cartão do item,<br>
+                    clique no ícone de sacola para abrir sua sacola com os itens selecionados,<br>
+                    altere a quantidade na sacola clicando em "-" e "+",<br>
+                    para remover um item, diminua a quantidade para menos de 1(0).<br>
+                    <br>Ao clicar em "Creditar" seu pedido será enviado, compareça à <a href="#sobre" style="color: #fff;">cantina</a> para pagar e receber seu pedido.
+                </p>
             </div>
         </div>
     </div>
@@ -47,7 +66,7 @@
                     <li class="nav-item"><a href="#menu" class="nav-link">MENU</a></li>
                     <li class="nav-item"><a href="#sobre" class="nav-link">SOBRE</a></li>
                     <li class="nav-item"><a href="#faleconosco" class="nav-link">CONTATO</a></li>
-                    <li class="nav-item"><a href="#ajuda" class="nav-link">AJUDA</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" onclick="ajudaShow()">AJUDA</a></li>
                 </ul>
             </menu>
             <div class="mobile-menu-icon">
@@ -62,7 +81,7 @@
                     <li class="nav-item"><a href="#menu" class="nav-link">MENU</a></li>
                     <li class="nav-item"><a href="#sobre" class="nav-link">SOBRE</a></li>
                     <li class="nav-item"><a href="#faleconosco" class="nav-link">CONTATO</a></li>
-                    <li class="nav-item"><a href="#ajuda" class="nav-link">AJUDA</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" onclick="ajudaShow()">AJUDA</a></li>
                 </ul>
             </menu>
             <article id="banner" class="banner">
