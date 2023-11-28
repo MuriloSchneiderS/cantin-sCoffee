@@ -90,17 +90,15 @@ header .logo img{
     height: 65%;
     width: 50%;
     padding: 20px 0;
-    margin: 0 25px;
     border-radius: 10px;
 }
 header menu{
     width: 50%;
-    padding: 25px;
 }
 header ul{
     display: flex;
     list-style: none;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 15px;
 }
 header ul li{
@@ -193,6 +191,13 @@ header menu a:hover{
         background-color: #e5d3ba;
         color: #181f27;
     }
+    footer{
+        flex-direction: column !important;
+        justify-content: space-evenly !important;
+        align-items: start !important;
+        width: 100%;
+        padding: 50px;
+    }
 }
 /*CORPO*/
 .banner{
@@ -223,6 +228,29 @@ header menu a:hover{
 }
 
 /*SACOLA / CARRINHO*/
+.pop-ajuda{
+    display: none;
+}
+.pop-ajuda.open{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+}
+.ajuda{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    max-height: 70%;
+    width: 450px;
+    padding: 35px;
+    background: #181f27;
+    color: #e5d3ba;
+    border-radius: 10px;
+}
 .sacola{
     position: fixed;
     top: 20%;
@@ -270,11 +298,15 @@ header menu a:hover{
     border-radius: 10px;
 }
 
-.carrinho .cabecalho-carrinho { 
+.pop-up .cabecalho-pop-up { 
     display: flex;
+    flex-direction: row;
 }
 
-.carrinho .cabecalho-carrinho button{
+.pop-ajuda .fechar-pop-up{
+    position: absolute;
+}
+.pop-up .fechar-pop-up{
    cursor: pointer;
    width: 40px;
    height: 40px;
@@ -286,16 +318,25 @@ header menu a:hover{
    border-radius: 8px 25px 25px 8px;
 }
 
-.carrinho .cabecalho-carrinho button:hover{
+.pop-up .fechar-pop-up:hover{
     color: var(--cor-primaria);
     background: var(--cor-secundaria);
     border-color: var(--cor-primaria);
 }
 
-.carrinho .cabecalho-carrinho h2{ 
+.pop-up .cabecalho-pop-up h1{ 
     margin: auto;
     text-align: center;
     color: var(--cor-secundaria);
+}
+.input-cliente{
+    background-color: transparent;
+    border: solid 2px #e5d3ba;
+    color: #e5d3ba;
+    min-height: 30px;
+    width: 60%;
+    border-radius: 5px;
+    font-size: 20px;
 }
 
 .carrinho ul{
@@ -309,7 +350,7 @@ header menu a:hover{
     width: 90%;
     margin: 30px;
     height: 20vh;
-    border-radius: 25px 10px 10px 25px;
+    border-radius: 30px 10px 10px 30px;
     background-color: var(--cor-secundaria);
     box-shadow: 0 4px 10px var(--cor-fundo);
     user-select: none;
@@ -319,7 +360,7 @@ header menu a:hover{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 10vw;
+    width: 65%;
     pointer-events: none;
 }
 .carrinho .carrinho-item img{ 
@@ -329,29 +370,36 @@ header menu a:hover{
     border-radius: 25px 0 0 25px;
 }
 .carrinho .carrinho-item .info{ 
-    width: 70%; 
+    width: 100%; 
     height: 100%;
-    padding: 14px; 
+    border: 14px solid transparent; 
+    border-right-width: 5px;
     color: var(--cor-primaria);
 }
 
 .carrinho .carrinho-item .detalhes{ 
     overflow-y: auto;
-    height: 75%;
+    height: 70%;
 }
 
 .carrinho .carrinho-item .preco{ 
     color: var(--cor-primaria);
-    margin-top: 8px;
+    bottom: 0;
 }
-
+.preco p{
+    position: absolute;
+    margin-top: 15px;
+    bottom: 6px;
+    background: #e5d3baac;
+}
 .carrinho .carrinho-item .contador{ 
     position: absolute;
     right: 15px;
     bottom: 0;
+    margin-top: 15px;
+    text-align: center;
 }
-
-.carrinho .carrinho-item .contador i{ 
+.carrinho .carrinho-item .contador .bx{ 
     cursor: pointer;
     width: 25px; 
     height: 35px; 
@@ -365,18 +413,20 @@ header menu a:hover{
     border-bottom: none;
     border-radius: 8px 8px 0 0;
 }
-.carrinho .carrinho-item .contador i:hover{ 
+.carrinho .carrinho-item .contador .bx:hover{ 
     color: var(--cor-primaria);
     background: var(--cor-secundaria);
 }
-
-.carrinho .carrinho-item .contador span{ 
+.carrinho .carrinho-item .contador .quantidade{ 
+    max-width: 25px;
     margin: 0 6px; 
     font: 700 1rem; 
+    text-align: center;
+    background: #e5d3baac;
     color: var(--cor-primaria);
 }
 
-.carrinho .pagar {
+.carrinho .finalizar {
     cursor: pointer;
     width: 100%;
     margin-top: 10px; 
@@ -388,7 +438,7 @@ header menu a:hover{
     transition: 0.3s;
 }
 
-.carrinho .pagar:hover{ 
+.carrinho .finalizar:hover{ 
     background: var(--cor-primaria);
     color: var(--cor-secundaria);
     border-color: var(--cor-secundaria);
@@ -417,18 +467,21 @@ header menu a:hover{
 }
 @media (max-width: 760px) {
     .swiper-button-next {
-      right: 15px;
       transform: rotate(90deg);
     }
     .swiper-button-prev {
-      bottom: 41px;
       transform: rotate(90deg);
     }
     .cardapio{
+        margin-bottom: 5px;
         width: 70%;
     }
     .slide-content{
-        padding-right: 0 !important;
+        padding-right: 30px !important;
+        max-height: 890px !important;
+    }
+    .valores{
+        display: flex;
     }
 }
 .swiper-navBtn{
@@ -459,7 +512,8 @@ header menu a:hover{
     max-height: 1000px;
 }
 .card{
-    height: fit-content;
+    height: fit-content !important;
+    min-height: 420px;
     max-height: 40%;
     border-radius: 30px 30px 10px 10px;
     margin: 0 15px;
@@ -469,12 +523,11 @@ header menu a:hover{
 .card-content{
     display: flex;
     flex-direction: column;
-    align-items: left;
     padding: 10px 15px;
-    height: 60%;
+    min-height: 220px;
     justify-content: space-between;
 }
-.card-content h2, .card-content p, .card-content .button{
+.card-content h2, .card-content p, .card-content .add-button{
     z-index: 2;
 }
 .image-content{
@@ -502,17 +555,21 @@ header menu a:hover{
     min-height: 50px;
     color: #e5d3ba;
 }
+.valores{
+    
+    width: 100%;
+    bottom: 0;
+}
 .valor{
     display: flex;
     flex-direction: column;
-    align-items: left;
     padding: 10px 15px;
     width: 100%;
 }
 .preco{
     color: #e5d3ba;
 }
-.button{    
+.add-button{    
     border: none;
     font-size: 25px;
     padding: 0 15px;
@@ -524,7 +581,7 @@ header menu a:hover{
     transition: all .3s ease;
     user-select: none;
 }
-.button:hover{
+.add-button:hover{
     background-color: #181f27;
     color: #e5d3ba;
     cursor: pointer;
@@ -548,4 +605,10 @@ footer{
 .sobre img{
     object-fit: scale-down;
     padding: 25px 15px 25px 0;
+}
+.horario{
+    padding: 15px 15px 15px 0;
+}
+.faleconosco{
+    padding: 15px 15px 0 0;
 }
